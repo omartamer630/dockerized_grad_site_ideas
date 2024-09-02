@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100dvh;
+}
+#root {
+  height: 100%;
+}
+h1 {
+  color: #c0c0c0; /* Silver text color */
+  background-color: transparent;
+}
+
+input,
+textarea {
+  @apply px-4 py-2 rounded-lg border-b-4 border-white resize-none;
+  transition: 250ms ease-in-out;
+}
+
+input {
+  @apply max-w-[300px] py-3;
+}
+textarea {
+  @apply w-[100%] min-h-[150px] overflow-hidden;
+}
+
+input:focus,
+textarea:focus {
+  @apply border-blue-500;
+  outline: none;
+}
+
+.error_border {
+  @apply border-b-red-600;
+}
+
+.shine {
+  text-shadow: 0px 0px 20px #c0c0c071;
+}
+.idea-card {
+  @apply p-4 border-b-4 rounded-lg hover:border-b-yellow-400  shadow-md bg-[#1F1E25] min-w-[300px] text-gray-100 w-full max-w-xs;
+  transition: all 250ms ease-in-out;
+}
+.idea-card:hover {
+  @apply border-b-yellow-400;
+}
+
+.options {
+  @apply flex flex-col z-10 text-white font-semibold justify-center items-center gap-2 absolute right-[-1px] bottom-[-4px] bg-[#27AE60] w-[75px] h-[75px];
+  border-bottom: 1px solid transparent;
+  border-radius: 5.1px 0 5.1px 0px; /* Custom CSS to apply radius only to bottom corners */
+  transition: all 100ms ease-in-out;
+}
+.options > * {
+  text-align: center;
+  cursor: pointer;
+  padding-block: 2px;
+  width: 100%;
+  height: 50%;
+  transition: inherit;
+}
+.options > *:hover {
+  background-color: #0e773a;
+}
+.hide_options {
+  bottom: -100%;
+}
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: bold;
+}
+a {
+  transition: all 200ms ease-in-out;
+}
+
+.text-container > * {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.markdownPreview {
+  line-height: 1.6;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  font-size: 1.15rem;
+  box-sizing: border-box;
+}
+
+.markdownPreview h1 {
+  font-size: 2.5rem; /* 40px */
+  margin-bottom: 1em;
+}
+
+.markdownPreview h2 {
+  font-size: 2rem; /* 32px */
+  margin-bottom: 0.75em;
+}
+
+.markdownPreview h3 {
+  font-size: 1.75rem; /* 28px */
+  margin-bottom: 0.5em;
+}
+
+.markdownPreview h4 {
+  font-size: 1.5rem; /* 24px */
+  margin-bottom: 0.5em;
+}
+
+.markdownPreview h5 {
+  font-size: 1.25rem; /* 20px */
+  margin-bottom: 0.5em;
+}
+
+.markdownPreview h6 {
+  font-size: 1rem; /* 16px */
+  margin-bottom: 0.5em;
+}
+
+.markdownPreview p {
+  margin-bottom: 1em;
+  font-size: 1.4rem;
+}
+
+.markdownPreview ul,
+.markdownPreview ol {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+.markdownPreview li {
+  margin-bottom: 0.5em;
+}
+
+.markdownPreview blockquote {
+  border-left: 2px solid;
+  padding-left: 1em;
+  margin: 1em 0;
+  color: #666;
+}
+
+.markdownPreview code {
+  font-size: 0.875rem; /* 14px */
+  background: #2b2a33;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+.markdownPreview pre {
+  font-size: 0.875rem; /* 14px */
+  background: #2b2a33;
+  padding: 1em;
+  border-radius: 3px;
+  overflow-x: auto;
+}
