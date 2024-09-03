@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
       port: Number(env.VITE_PREVIEW_PORT) || 5411,
       proxy: {
         "/api": {
-          target: `http://localhost:80`,
+          target: `https://localhost:443`,
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },
@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => {
       port: Number(env.VITE_SERVER_PORT) || 5411,
       proxy: {
         "/api": {
-          target: `http://localhost:80`,
+          target: `https://localhost:443`,
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ""),
         },

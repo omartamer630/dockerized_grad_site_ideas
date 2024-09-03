@@ -6,7 +6,7 @@ services:
       context: ./client
     image: omartamer12/grad_site_ideas:frontend
     ports:
-      - "80:80"
+      - "443:443"
     depends_on:
       - backend
 

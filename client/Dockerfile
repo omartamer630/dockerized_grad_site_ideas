@@ -6,13 +6,12 @@ COPY . ./
 
 RUN npm install && npm run build
 
-#CMD ["npm", "run", "preview"]
-
 FROM nginx:alpine
 
 COPY --from=build /client/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-EXPOSE 80
+COPY certs /usr/share/nginx/html/certs
+EXPOSE 443
 CMD ["nginx", "-g", "daemon off;"]
 
 
