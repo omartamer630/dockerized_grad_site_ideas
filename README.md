@@ -55,12 +55,6 @@ docker compose up --build -d
 ```bash
 http://localhost:80
 ```
-or
-```bash
-http://ec2-13-38-230-173.eu-west-3.compute.amazonaws.com:3000/
-```
-for browser search.
-
 ### Deployment
 
 # The application is deployed using AWS EC2. The Docker container is hosted
