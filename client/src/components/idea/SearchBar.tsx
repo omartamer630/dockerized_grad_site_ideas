@@ -17,7 +17,7 @@ const SearchBar = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <input
-          className="min-w-[400px]"
+          className="search_bar min-w-[400px]"
           type="text"
           placeholder="Search Ideas..."
           value={data}
