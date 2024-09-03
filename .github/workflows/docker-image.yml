@@ -32,8 +32,8 @@ jobs:
         file: ./client/Dockerfile
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner }}/grad_idea_client:latest
-          ghcr.io/${{ github.repository_owner }}/grad_idea_client:${{ github.sha }}
+          ghcr.io/${{ github.repository_owner }}/grad_idea_clientMO:latest
+          ghcr.io/${{ github.repository_owner }}/grad_idea_clientMO:${{ github.sha }}
 
     # Build and push server Docker image
     - name: Build and push server Docker image
@@ -43,5 +43,5 @@ jobs:
         file: ./server/Dockerfile
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner }}/grad_idea_server:latest
-          ghcr.io/${{ github.repository_owner }}/grad_idea_server:${{ github.sha }}
+          ghcr.io/${{ github.repository_owner }}/grad_idea_serverMO:latest
+          ghcr.io/${{ github.repository_owner }}/grad_idea_serverMO:${{ github.sha }}
