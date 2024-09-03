@@ -3,10 +3,10 @@ name: Docker Image CI
 on:
   push:
     branches:
-      - master
+      - MoaBranch
   pull_request:
     branches:
-      - master
+      - MoaBranch
 jobs:
   build:
     runs-on: ubuntu-latest
