@@ -24,12 +24,24 @@ jobs:
         registry: ghcr.io
         username: ${{ github.repository_owner }}
         password: ${{ secrets.GITHUB_TOKEN }}
-
-    - name: Build and push Docker image
+# Build and push client Docker image
+    - name: Build and push client Docker image
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./client
+        file: ./client/Dockerfile
         push: true
         tags: |
-          ghcr.io/${{ github.repository_owner }}/promptopia:latest
-          ghcr.io/${{ github.repository_owner }}/promptopia:${{ github.sha }}
+          ghcr.io/${{ github.repository_owner }}/grad_idea_client:latest
+          ghcr.io/${{ github.repository_owner }}/grad_idea_client:${{ github.sha }}
+
+    # Build and push server Docker image
+    - name: Build and push server Docker image
+      uses: docker/build-push-action@v5
+      with:
+        context: ./server
+        file: ./server/Dockerfile
+        push: true
+        tags: |
+          ghcr.io/${{ github.repository_owner }}/grad_idea_server:latest
+          ghcr.io/${{ github.repository_owner }}/grad_idea_server:${{ github.sha }}
