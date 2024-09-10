@@ -4,7 +4,7 @@ services:
   frontend:
     build:
       context: ./client
-    image: grad_site_ideas:frontend
+    image: grad_site_ideas_frontend
     ports:
       - "443:443"
     depends_on:
@@ -13,7 +13,7 @@ services:
   backend:
     build:
       context: ./server
-    image: grad_site_ideas:backend
+    image: grad_site_ideas_backend
     ports:
       - "4001:4001"
     environment:
